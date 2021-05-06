@@ -1,0 +1,11 @@
+
+
+RewriteEngine On
+
+# RewriteCond %{SERVER_PORT} 80
+# RewriteRule ^(.*)$ https://www.summerexploring.wildwildwebs.fr/$1 [R,L]
+
+RewriteRule ^([a-zA-Z0-9-]*)/?$ index.php?pag=$0
+
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/?$ index.php?pag=$1&url_1=$2
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/?$ index.php?pag=$1&url_1=$2&url_2=$3
